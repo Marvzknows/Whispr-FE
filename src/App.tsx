@@ -7,6 +7,8 @@ import DashboardPage from "./pages/DashboardPage";
 import AdminPage from "./pages/AdminPage";
 import { NotFoundPage } from "./pages/ErrorPages";
 import SamplePage from "./pages/SamplePage";
+import ChatPage from "./pages/ChatPage";
+import FriendsPage from "./pages/FriendsPage";
 
 export default function App() {
   return (
@@ -21,6 +23,8 @@ export default function App() {
       <Route element={<RequireAuth />}>
         <Route element={<Layout />}>
           <Route index element={<DashboardPage />} />
+          <Route path="/chat" element={<ChatPage />} />
+          <Route path="/friends" element={<FriendsPage />} />
           <Route path="/sample" element={<SamplePage />} />
 
           {/* Authorization: ADMIN only */}

@@ -2,10 +2,7 @@ import { Navigate, Outlet, useLocation } from "react-router";
 import { ForbiddenPage } from "../pages/ErrorPages";
 import type { Role } from "../types";
 import { useAuth } from "./useAuth";
-
-function Loading() {
-    return <p className="center">Loading…</p>;
-}
+import Loading from "@/components/Loading";
 
 export function RequireAuth() {
     const { user, authStatus } = useAuth();
